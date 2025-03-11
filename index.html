@@ -6,16 +6,25 @@
     <title>APJ furniture</title>
        <link rel="stylesheet" href="style.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
     
 </head>
 <body>
+    <body onload="hidePreloader()">
+        <div id="preloader">
+            <div class="spinner"></div>
+        </div>
+        
+        <div id="content" style="display: none;">
+        </div>
+    
     <nav>
         <h1><span>APJ</span>Furniture</h1>
         <ul id="navMenu">
-            <li id="home">Home </li>
-            <li>Product <i class="fa-solid fa-chevron-down"></i></li>
-            <li>About</li>
-            <li>Contact</li>
+            <li id="home"> <a href="#home">Home </a></li>
+            <li><a href="#pro">Product <i class="fa-solid fa-chevron-down"></i></a></li>
+            <li> <a href="#foot">About</a></li>
+            <li> <a href="#foot">Contact</a></li>
             
         </ul>
         <div class="close" id="close" onclick="hideul()">
@@ -33,20 +42,9 @@
         </div>
     </nav>
     
-    <script>
-        function showul() {
-            document.getElementById("navMenu").style.display = "block";
-            document.getElementById("close").style.display = "block";
-        }
+   
     
-        function hideul() {
-            document.getElementById("navMenu").style.display = "none";
-            document.getElementById("close").style.display = "none";
-        }
-    </script>
-    
-    
-    <div class="con1">
+    <div class="con1" id="home">
         <div class="nner">
             <div class="box1"></div>
             <div class="box2"><img src="https://s3-alpha-sig.figma.com/img/aa9b/ffef/b9453071580c827fa45ded8f43ed280d?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=dhY6tmMFpBpgyF3~gTJ6p0SFlNRJwH7ntLWVWmvsDCQVE1jBnl5-0~Z4jrdnD2AYyBZdX8d~QszT2~QxBaWc9cbc66Z6zwBTi51-4XLqI1qKmrkxO1~o9tbC3ZWAd~aWLNK3NI1KkSyVMilpdRYpTLFIcHFUEbdpoY2-19FS03stAZs37JghxgGrJBo9FfM6JjM6UoDffZX8SmgeJSu8uAku~Kvt6u-X40TKhV9B1Zw7d0Vhz81S-TOqlV-vtuelvvT5cUg-q~w3M1N3XDvZPc8hwNdSKUEBuJAZX11G~wB6hh8743HT2lcj9-s9aFWe8TicXTsNjyEHTZN22q-ytQ__" alt=""></div>
@@ -113,7 +111,7 @@
             <div class="rty"><i class="fa-solid fa-chevron-right"></i></div>
         </div>
     </div>
-    <div class="con4">
+    <div class="con4" id="pro">
         <h1>Products</h1>
         <ul>
             <li id="all">All</li>
@@ -154,7 +152,7 @@
         </div>
         <p id="see">See All <i class="fa-solid fa-chevron-right"></i></p>
     </div>
-    <footer>
+    <footer id="foot">
         <div class="fr">
             <div class="cont">
                 <h1>Subscribe to get 
@@ -167,18 +165,7 @@
                         <button id="validation">Subscribe</button>
                     </div>
             </div>
-            <script>
-                document.getElementById("validation").addEventListener("click", function() {
-                    var email = document.getElementById("email").value;
-                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    
-                    if (emailPattern.test(email)) {
-                        alert("Subscription successful!");
-                    } else {
-                        alert("Please enter a valid email address.");
-                    }
-                });
-            </script>
+            
         </div>
         <div class="line"></div>
         <div class="sec">
@@ -191,5 +178,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
