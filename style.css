@@ -32,8 +32,13 @@ nav .svgs{
     display: flex;
     justify-content: space-evenly;
 }
-#home{
+#home a{
 color: var(--color1);
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
 }
 .burger{
     display: none;
@@ -645,6 +650,7 @@ footer{
     background: url('https://s3-alpha-sig.figma.com/img/5529/8502/3ef2f13ecfb1177a3f0e7da1a997fc38?Expires=1742774400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Qh2mxbzclG-I3drElVtMl5xdHVuUzFYNskIpAinTGLm6T54CvYkU-v-KouRQSOMmb2buJFuoe51WTCt7Is16RgYDlE3fJ1vpAgXsQIW~~lHd7rL~aZWjFryJrFJ6h~v-GY8jSIvD3dGfDVAG8r8Pu-1kR5pobRPubasOdfIO6iXzpffJW66z8LM9LveRsEgKYBi18PRP~6GiLiPTBIBCnsvLDsyR3r4trRnps162PSbWZbnzL~aq57UUVV1bF127zYP2ineLQj-igOR~j1NKm7rO5m~7k0bSAL4HHWh8pHRKle5embZJXGUptiD~z9CUQBEq9RmuZ-lL8wOdC2qwWQ__')no-repeat;
     background-size: cover;
     background-color: #a76a1f;
+    color: snow;
 }
 
 
@@ -717,6 +723,8 @@ footer{
     padding: 0;
 }
 
+
+
 @media (min-width: 768px) {
     .fr {
         flex-direction: row;
@@ -743,4 +751,26 @@ footer{
         width: 90%;
         margin: 0 auto;
     }
+}
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 2s ease-in-out infinite;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
